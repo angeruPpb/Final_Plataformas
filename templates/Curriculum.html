@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <title>Curriculum</title>
+    <meta charset="utf-8">
+  </head>
+  
+  <body>
+    
+    <div id="parent">
+      <div id="sect_1"><center><img src="{{url_for('static',filename='images/perfil2.png')}}" width="120" height="120"></center>
+        
+      </div>
+      <div id="sect_2">
+        <h1><big><center><font color="white">{{newname}}</font></center></big></h1>
+        <p><center><font color=#A3A1A1 size="4">{{newocupacion}}</font></center></p>
+      </div>
+    </div>
+    <div id="parent">
+      <div id="sect_3">
+        <lh><b>CONTACTO</b></lh><hr color=#000000>
+          <font size="2">
+          <dt><img src="{{url_for('static',filename='images/phone.png')}}" width="12" height="12">&nbsp {{newtelefono}}</dt>
+          <dt><img src="{{url_for('static',filename='images/mensaje.png')}}" width="12" height="12">&nbsp {{newemail}}</dt>
+          <dt><img src="{{url_for('static',filename='images/mapa.png')}}" width="12" height="12">&nbsp {{newnacionalidad}}</dt>
+          <dt><img src="{{url_for('static',filename='images/linkedin.png')}}" width="12" height="12">&nbsp linkedn/{{newname}}</dt></font><br>
+        <lh><b>IDIOMAS</b></lh><hr color=#000000>
+          <font size="2"><dt>Español: Nativo</dt>
+          <dt>Inglés: {{newingles}}</dt>
+          <dt>Francés: Intermedio(B2)</dt></font><br>
+        <lh><b>APTITUDES</b></lh><hr color=#000000>
+          <font size="2"><li>{{newaptitudes}}</li></font><br>
+        <lh><b>HABILIDADES</b></lh><hr color=#000000>
+          <font size="2">
+              {% if newhabilidades[0] %}
+                <li>{{newhabilidades[0]}}</li>{% endif %}
+              {% if newhabilidades[1] %}
+                <li>{{newhabilidades[1]}}</li>{% endif %}
+              {% if newhabilidades[2] %}
+                <li>{{newhabilidades[2]}}</li>{% endif %}
+              {% if newhabilidades[3] %}
+                <li>{{newhabilidades[3]}}</li>{% endif %}
+              {% if newhabilidades[4] %}
+                <li>{{newhabilidades[4]}}</li>{% endif %}
+          </font><br>
+        <lh><b>LENGUAJES DE PROGRAMACION</b></lh><hr color=#000000>
+          <font size="2">
+              {% if newlenguajes[0] %}
+                <li>{{newlenguajes[0]}}</li>{% endif %}
+              {% if newlenguajes[1] %}
+                <li>{{newlenguajes[1]}}</li>{% endif %}
+              {% if newlenguajes[2] %}
+                <li>{{newlenguajes[2]}}</li>{% endif %}
+              {% if newlenguajes[3] %}
+                <li>{{newlenguajes[3]}}</li>{% endif %}
+              {% if newlenguajes[4] %}
+                <li>{{newlenguajes[4]}}</li>{% endif %}
+            
+          </font><br>
+        <lh><b>OTROS INTERESES</b></lh><hr color=#000000>
+          <font size="2"><li>Creador de yincanas</li>
+          <li>Paseos ecologicos grupales</li>
+          <li>Lectura grupal en inglés</li></font>
+        </div>
+      <div id="sect_4">
+        <lh><b>PERFIL</b></lh><hr color=#000000>
+            <dt><font size="2">{{newfecha}} || {{newperfil}}</font></dt><br>
+        <lh><b>EXPERIENCIA LABORAL</b></lh><hr color=#000000>
+          <dt><b>Trabajador Social</b></dt>
+          <dt><font size="2"><b><i>México DF,</i></b><font color="959595"> | 2022-Actualmente</font></dt>
+            <li> Coordinador y mediador entre los equipos de ayuda psicologica a jovenes y niños en exclusion social.</li>
+            <li>Velar por la salud mental del equipo de ayuda psicologica a jovenes y niños en exclusion social.</li>
+            <li>Mepeo de necesidades estrategicas y logicas para las diferentes areas</li>
+            <li>Monitor de ejercicios fisicos para adolescentes.</li>
+            <li>Programar diferentes actividades extracurriculares en los involucrados.</li>
+            </font><br>
+          <dt><b>Trabajador Social</b></dt>
+          <dt><font size="2"><b>México DF,</b><font color="959595"> | 2020-2022</font></dt>
+            <li>Funciones para seguimientos de casos para jovenes con problemas de adicciones.</li>
+            <li>Capacitaciones e integracion vinculadas a medidas preventivas.</li>
+            <li>Recopilacion de evidencias para auditorias y programas sociales.</li>
+            </font><br>
+          <dt><b>Trabajador Social (Practicas)</b></dt>
+          <dt><font size="2"><b><i>Zaragosa,</i> España</b><font color="959595"> | 2019-2020</font></dt>
+            <li>Profesor de lengua española e inglesa para jovenes migrantes</li>
+            <li>Monitor de actividades ecologicas con adolescentes</li>
+            <li>Coordinador de actividades deportivas</li>
+            </font><br>
+        <lh><b>FORMACION</b></lh><hr color=#000000>
+          <dt><b>Grado de Trabajador Social</b></dt>
+          <dt><font size="2"><b><i>ESMA,</i> Madrid</b><font color="959595"> | 2012-2015</font></font></dt>
+          <dt><b>Licenciatura Profesional</b></dt>
+          <dt><font size="2"><b><i>Universidad de la frontera,</i> México DF</b><font color="959595"> | 2011-2012</font></font></dt>
+      </div>
+    </div>
+  </body>
+</html>

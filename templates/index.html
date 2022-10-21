@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    	<link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+        <meta charset="utf-8" />
+        <title>Formulario</title>
+        <script src="{{url_for('static',filename='java.js')}}"></script>
+    </head>
+    <body>
+        <div id="sect_7">
+        <h1><center>Formulario Curriculum</center></h1>
+    	</div>
+		<form action="{{url_for('curriculum')}}" method="post">
+		<div id="parent">
+			<div = id="sect_5">
+				<p>Nombre y Apellidos: </p>
+				<input id="nombre" type="text" name="name">
+				<p>Fecha de nacimiento: </p>
+				<input id="date" type="date" name="fecha">
+				<p>Ocupacion: </p>
+				<input id="ocupacion" type="text" name="ocupacion">
+				<p>Contacto: </p>
+				<input id="email" type="text" name="email" placeholder="email">
+				<input id="telefono" type="tel" name="phone" placeholder="123456789" pattern="[0-9]{3} [0-9]{3} [0-9]{3}">
+				<p>Nacionalidad: </p>
+				<select id="nacionalidad" name="nacionalidad">
+					<option value="Peruano">Peruano</option>
+					<option value="Chileno">Chileno</option>
+					<option value="Brasileño">Brasileño</option>
+					<option value="Argentino">Argentino</option>
+					<option value="Uruguayo">Uruguayo</option>
+					<option value="Español">Español</option>
+				</select>
+				<p>Nivel de ingles: </p>
+				<input type="radio" id="1" name="ingles" value="Avanzado">
+				<label for="1">Avanzado</label><br>
+				<input type="radio" id="2" name="ingles" value="Intermedio">
+				<label for="2">Intermedio</label><br>
+				<input type="radio" id="3" name="ingles" value="Basico">
+				<label for="3">Basico</label><br>
+				<input type="radio" id="4" name="ingles" value="Nativo">
+				<label for="4">Nativo</label><br>
+			</div>
+			<div id="sect_6">
+				<p>Lenguajes de Programacion: </p>
+				<input type="checkbox" id="p1" name="Python" value="Python">
+				<label for="1">Python</label><br>
+				<input type="checkbox" id="p2" name="C++" value="C++">
+				<label for="2">C++</label><br>
+				<input type="checkbox" id="p3" name="Java" value="Java">
+				<label for="3">Java</label><br>
+				<input type="checkbox" id="p4" name="PHP" value="PHP">
+				<label for="4">PHP</label><br>
+				<input type="checkbox" id="p5" name="C#" value="C#">
+				<label for="5">C#</label><br>
+				<input type="hidden" id="px" name="px" value="1"></input>
+				<p>Aptitudes: </p>
+				<input list="Aptitudes" name="Aptitudes" id="Aptitud">
+				<datalist id="Aptitudes">
+					<option  data-value="Amigable"></option>
+					<option data-value="Trabajador"></option>
+					<option data-value="Activo"></option>
+					<option data-value="Liderazgo"></option>
+					<option data-value="Bondadoso"></option>
+				</datalist>
+				<p>Habilidades: </p>
+				<input type="checkbox" id="h1" name="h1" value="Trabajo en equipo" class="h">
+				<label for="1">Trabajo en equipo </label><br>
+				<input type="checkbox" id="h2" name="h2" value="Comunicacion Constante" class="h">
+				<label for="2">Comunicacion Constante</label><br>
+				<input type="checkbox" id="h3" name="h3" value="Creatividad" class="h">
+				<label for="3">Creatividad</label><br>
+				<input type="checkbox" id="h4" name="h4" value="Actitud Positiva">
+				<label for="4">Actitud Positiva</label><br>
+				<input type="checkbox" id="h5" name="h5" value="Capacidad para resolver problemas">
+				<label for="5">Capacidad para resolver problemas</label>
+				<input type="hidden" id="hx" name="hx" value="1"></input>
+				<p>Perfil: </p>
+				<textarea id="perfil" name="perfil" rows="6" cols="50">Coloque una breve descripcion.	
+				</textarea><br><br>
+				<button class="button" id="submit">Registrar</button>
+				<p id="demo"></p>
+			</div>
+		</div>
+		</form>
+
+	</body>
+</html>
